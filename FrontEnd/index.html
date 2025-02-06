@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Sistema de clientes fidelizados</title>
+</head>
+
+<body>
+    <h1>Clientes Fidelizados</h1>
+
+    <!-- Formulário para criar um cliente -->
+    <h2>Criar Clientes</h2>
+    <form id="createForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+        <label for="approved">Fidelizado:</label>
+        <input type="checkbox" id="fidelized" name="approved">
+        <button type="submit">Criar</button>
+    </form>
+
+    <hr>
+
+    <!-- Botão para listar todos os clientes -->
+    <h2>Lista de Clientes</h2>
+    <button id="listButton">Listar Clientes</button>
+    <ul id="peopleList"></ul>
+
+    <hr>
+
+    <!-- Formulário para atualizar um cliente -->
+    <h2>Atualizar Cliente Por ID</h2>
+    <form id="updatePersonForm">
+        <label for="updateId">ID:</label>
+        <input type="text" id="updateId" name="updateId" required>
+
+        <label for="updateName">Nome:</label>
+        <input type="text" id="updateName" name="updateName">
+
+        <label for="updateEmail">Email:</label>
+        <input type="text" id="updateEmail" name="updateEmail">
+
+        <label for="">Fidelizado:</label>
+        <input type="checkbox" id="updateFidelized" name="approved">
+
+        <button type="submit">Atualizar</button>
+    </form>
+
+    <div id="updateResponse"></div>
+
+    <hr>
+
+    <!-- Formulário para deletar um cliente -->
+    <h2>Deletar Cliente</h2>
+    <form id="deleteForm">
+        <label for="deleteId">ID:</label>
+        <input type="text" id="deleteId" name="deleteId" required>
+        <button type="submit">Deletar</button>
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
